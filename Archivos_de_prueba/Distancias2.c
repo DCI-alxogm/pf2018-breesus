@@ -14,11 +14,28 @@ int main(){
     int i;
 
     Ale=fopen("Aleatorios.txt", "r");
-    Datos=fopen("Números_de_prueba.c", "r");
+    Datos=fopen("datos.txt", "r");
 
     for(i=0; i<10; i++){
        fscanf(Ale, "%f %f %f", &x1, &y1, &z1);
        printf("%f %f %f\n", x1, y1, z1);
+       for(i=0;i<10;i++){
+           fscanf(Ale, "%f %f %f", &x2, &y2, &z2);
+           s=sqrt((pow((x2-x1),2)+pow((y2-y1),2)+pow((z2-z1),2)));
+           printf("%f\n", s);
+           }}
+for(i=0; i<10; i++){
+       fscanf(Ale, "%f %f %f", &x1, &y1, &z1);
+       printf("%f %f %f\n", x1, y1, z1);
+       for(i=0;i<10;i++){
+           fscanf(Datos, "%f %f %f", &x2, &y2, &z2);
+           s=sqrt((pow((x2-x1),2)+pow((y2-y1),2)+pow((z2-z1),2)));
+           printf("%f\n", s);
+           }}
+fclose(Ale);
+for(i=0; i<10; i++){
+       fscanf(Datos, "%f %f %f", &x1, &y1, &z1);
+       printf("%f %f %f\n", x2, y2, z2);
        for(i=0;i<10;i++){
            fscanf(Datos, "%f %f %f", &x2, &y2, &z2);
            s=sqrt((pow((x2-x1),2)+pow((y2-y1),2)+pow((z2-z1),2)));
