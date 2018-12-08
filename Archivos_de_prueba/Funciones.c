@@ -33,8 +33,7 @@ int Lineas(char Nombre[40]){
     FILE *Ale;
     int nl, ch;
     
-    printf("Introduzca el nombre del archivo del que desea contar las lineas.\n");
-    scanf("%s", Nombre);
+    
     Ale=fopen(Nombre, "r");
     nl=0;
     while((ch=fgetc(Ale)) != EOF){     //Se evalua la condicion de que no sea el final del archivo.
