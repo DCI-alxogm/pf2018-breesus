@@ -46,7 +46,7 @@ int main(){
     for(k=0; b2[k]<L; k++){
     b1[k]=b1[k-1]+r2;
     b2[k]=b2[k-1]+r2;
-    
+    }
     Arc=fopen(Nombre1, "r");
     for(i=0; i<l1-1; i++){
        fscanf(Arc, "%f %f %f", &x[i], &y[i], &z[i]);
@@ -106,8 +106,6 @@ printf("valores de r para el archivo %s\n", Nombre2);
             p[2]++;
           }}
 
-}
-
       printf("¿Qué estimador quiere usar?\n (1) Estimador simple.\n (2) Estimador de Landy-Szalay.\n");
       scanf("%i", &k);
       switch(k){
@@ -115,12 +113,14 @@ printf("valores de r para el archivo %s\n", Nombre2);
           for(i=0; i<L; i++){
           E=((p[2]/p[0])*(c1[i]/c3[i]))-1;
           fprintf(Res, "%i %f", i, E);
-       
+       }
       case 2: 
          for(i=0; i<L; i++){
          E=((c1[i]/p[0])-((2*c2[i])/p[1])+(c3[i]/p[2]))/(c3[i]/p[2]);
          fprintf(Res, "%i %f", i, E);
        }
+
+}
 return 0;
 }
 
