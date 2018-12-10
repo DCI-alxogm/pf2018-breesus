@@ -14,8 +14,6 @@ void Aleatorios(int n, float L){
        
              
         printf("El número de puntos sera %i.\n", n);
-                    
-        printf("Indique la longitud de los lados del cubo");
         
          Ale=fopen("Aleatorios.txt", "w");
          
