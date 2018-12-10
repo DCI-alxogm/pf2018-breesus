@@ -4,10 +4,10 @@ Esta parte del codigo tiene como objetivo almacenar las funciones usadas para el
 #include<stdlib.h>
 #include<math.h>
 #include<stdio.h>
-void Aleatorios(int n){
+void Aleatorios(int n, float L){
      FILE*Ale;          //Se declara una variable para abrir el archivo donde se guardarán los números.
         float x, y, z;  //Se declaran los flotantes para los vectores unitarios de posición y la longitud de los lados del cubo.
-        int i, L;             //Se declara una variable para controlar funciones.
+        int i;             //Se declara una variable para controlar funciones.
         srand(time(NULL));    //Se introduce una "semilla" para los números aleatorios enteros con relación a la hora de compilación.
         srand48(time(NULL));  //Se introduce una "semilla" para los números aleatorios flotantes con relación a la hora de compilación 
 
@@ -16,7 +16,7 @@ void Aleatorios(int n){
         printf("El número de puntos sera %i.\n", n);
                     
         printf("Indique la longitud de los lados del cubo");
-        scanf("%i", &L);
+        
          Ale=fopen("Aleatorios.txt", "w");
          
          for(i=0; i<n; i++){
